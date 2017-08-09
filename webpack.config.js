@@ -1,4 +1,10 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
+    template: './index.html',
+    filename: 'index.html',
+    inject: 'body'
+});
 
 let config = {
     devtool: 'source-map',
@@ -14,9 +20,14 @@ let config = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader'
+            },
+            {
+                test: /\.scss$/,
+                loaders: ['style-loader', 'css-loader', 'sass-loader']
             }
         ]
-    }
+    },
+    plugins: [HtmlWebpackPluginConfig]
 }
 
 module.exports = config;
