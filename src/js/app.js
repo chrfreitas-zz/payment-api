@@ -1,2 +1,6 @@
-let a = 1 ;
-console.log(a);
+
+window.buy = (a) => {
+    console.log(a);
+}
+
+console.log(PaymentRequest);
