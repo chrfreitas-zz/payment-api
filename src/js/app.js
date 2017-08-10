@@ -1,15 +1,18 @@
 
 'use strict';
 
+
 window.buy = () => {
 
     if (!window.PaymentRequest) {
         throw "Your browser doesn't suppport PaymentRequest";
     }
 
-    let methodData = [
-        {
-            supportedMethods: ['visa', 'mastercard']
+    let methodData = [{
+            supportedMethods: ['visa', 'mastercard'],
+            data: {
+                supportedTypes: ['credit', 'debit']
+            }
         }
     ];
 
@@ -25,12 +28,12 @@ window.buy = () => {
 
 
     new PaymentRequest(methodData, details)
-      .show()
-      .then(function(uiResult) {
-        //sucess
-      })
-      .catch(function(error) {
-        //error
-      });
+        .show()
+        .then(function(uiResult) {
+            alert('Success');
+        })
+        .catch(function(error) {
+            alert('Error');
+        });
 
 }
