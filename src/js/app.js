@@ -16,15 +16,35 @@ window.buy = () => {
         }
     ];
 
-    let details = {
-        total: {
-            label: 'Something that costs money',
+
+    let products = [
+        {
+            label: 'House',
             amount: {
-                currency: 'GBP',
-                value: '9.99'
+                currency: 'USD',
+                value: '10.00'
+            }
+        },
+        {
+            label: 'Car',
+            amount: {
+                currency: 'USD',
+                value: '24.99'
             }
         }
-    };
+    ];
+
+
+    let details = {
+        total: {
+            label: 'Total',
+            amount: {
+                currency: 'USD',
+                value: 34.99
+            }
+        },
+        displayItems: products
+    }
 
 
     new PaymentRequest(methodData, details)
