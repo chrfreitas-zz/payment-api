@@ -13,7 +13,7 @@ body {
     -ms-align-items: center;
     align-items: center;
     height: 100%;
-    background: linear-gradient(45deg, #152E3D, #1A374C);
+    background: linear-gradient(45deg, #349889, #319090);
 }
 
 
@@ -28,6 +28,14 @@ body {
     align-items: center;
     font-size: 20px;
     cursor: pointer;
+    border: 5px solid #087767;
+    background: #087767;
+    color: #fff;
+}
+
+.button:focus {
+    background: #087767;
+    color: #fff;
 }
 
 .button:focus,
