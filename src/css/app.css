@@ -13,4 +13,24 @@ body {
     -ms-align-items: center;
     align-items: center;
     height: 100%;
+    background: linear-gradient(45deg, #152E3D, #1A374C);
+}
+
+
+.button {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.button:focus,
+.button:hover {
+    outline: 0;
 }
